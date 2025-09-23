@@ -9,5 +9,5 @@
 - [ ] Delete this `README` section
 
 # comp-score-scraper
-https://comp-score-scraper.github.io/comp-score-scraper/
+https://brookeweil.github.io/comp-score-scraper/
 

@@ -11,7 +11,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://comp-score-scraper.github.io/comp-score-scraper/",
+  "homepage": "https://brookeweil.github.io/comp-score-scraper/",
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build && node versionUtil.js",
