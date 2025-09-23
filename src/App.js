@@ -6,7 +6,6 @@ import {
   Heading,
   Table,
   NativeSelect,
-  HStack,
   VStack,
   Text,
   Spinner,
@@ -18,7 +17,7 @@ import './App.css';
 import { Climber, Climb, Result, Division, ONSIGHT_BONUS } from './models';
 import { generateMockData, generateMockDivisions } from './mockData';
 
-const SHOW_MOCK_DATA_BUTTON = true; // Set to true to allow mock data functionality (dev)
+const SHOW_MOCK_DATA_BUTTON = false; // Set to true to allow mock data functionality (dev)
 
 function App() {
   const [climbers, setClimbers] = useState({});
