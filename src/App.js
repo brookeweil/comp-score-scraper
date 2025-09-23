@@ -183,13 +183,24 @@ function App() {
             </Alert>
           )}
 
-          <HStack spacing={4} justify="center">
-            <Button onClick={fetchData} isLoading={loading} colorScheme="blue" disabled={useMockData}>
+          <Box
+            display={{ base: "flex", md: "flex" }}
+            flexDirection={{ base: "column", md: "row" }}
+            alignItems={{ base: "stretch", md: "center" }}
+            justifyContent="center"
+            gap={4}
+            mb={2}
+          >
+            <Button
+              onClick={fetchData}
+              isLoading={loading}
+              disabled={useMockData}
+            >
               Refresh Data
             </Button>
 
             {SHOW_MOCK_DATA_BUTTON && (
-              <Button onClick={toggleMockData} colorScheme={useMockData ? "green" : "gray"}>
+              <Button onClick={toggleMockData} >
                 {useMockData ? "Using Mock Data" : "Use Mock Data"}
               </Button>
             )}
@@ -256,7 +267,7 @@ function App() {
                 Clear Filters
               </Button>
             )}
-          </HStack>
+          </Box>
 
           {loading && (
             <Box textAlign="center">
@@ -329,19 +340,19 @@ function App() {
                     <Table.Row>
                       <Table.ColumnHeader>Rank</Table.ColumnHeader>
                       <Table.ColumnHeader>Climber Name</Table.ColumnHeader>
-                      <Table.ColumnHeader textAlign="end">Score</Table.ColumnHeader>
-                      <Table.ColumnHeader textAlign="end">Num Climbs</Table.ColumnHeader>
+                        <Table.ColumnHeader textAlign="center">Score</Table.ColumnHeader>
+                        <Table.ColumnHeader textAlign="center">Num Climbs</Table.ColumnHeader>
                       <Table.ColumnHeader>Scored Climbs</Table.ColumnHeader>
                     </Table.Row>
                   </Table.Header>
                   <Table.Body>
                     {results.map((result, index) => (
-                      <Table.Row key={result.climberName}>
+                      <Table.Row key={result.climberName} _odd={{ bg: "blue.50" }}>
                         <Table.Cell fontWeight="bold">{index + 1}</Table.Cell>
                         <Table.Cell>{result.climberName}</Table.Cell>
                         <Table.Cell textAlign="end" fontWeight="bold">{result.score}</Table.Cell>
-                        <Table.Cell textAlign="end">{result.numClimbs}</Table.Cell>
-                        <Table.Cell>{result.scoredClimbs}</Table.Cell>
+                        <Table.Cell textAlign="center">{result.numClimbs}</Table.Cell>
+                        <Table.Cell maxWidth="100px">{result.scoredClimbs}</Table.Cell>
                       </Table.Row>
                     ))}
                   </Table.Body>
