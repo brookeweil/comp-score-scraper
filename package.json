@@ -1,5 +1,5 @@
 {
-  "name": "gh-pages-hello-world",
+  "name": "comp-score-scraper",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,7 +11,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://brookeweil.github.io/gh-pages-hello-world/",
+  "homepage": "https://comp-score-scraper.github.io/comp-score-scraper/",
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build && node versionUtil.js",
