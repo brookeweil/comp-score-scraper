@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/comp-score-scraper/static/css/main.073c9b0a.css",
+    "main.js": "/comp-score-scraper/static/js/main.9f00020a.js",
+    "index.html": "/comp-score-scraper/index.html",
+    "main.073c9b0a.css.map": "/comp-score-scraper/static/css/main.073c9b0a.css.map",
+    "main.9f00020a.js.map": "/comp-score-scraper/static/js/main.9f00020a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.9f00020a.js"
+  ]
+}
