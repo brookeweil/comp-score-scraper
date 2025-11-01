@@ -140,14 +140,14 @@ function App() {
     // Apply gender filter if selected
     if (filterGender) {
       filteredResults = filteredResults.filter(result =>
-        result.gender === filterGender.toUpperCase()
+        result.gender.toLowerCase() === filterGender.toLowerCase()
       );
     }
 
     // Apply category filter if selected
     if (filterCategory) {
       filteredResults = filteredResults.filter(result =>
-        result.category === `${filterCategory[0].toUpperCase()}${filterCategory.slice(1).toLowerCase()}`
+        result.category.toLowerCase() === (`${filterCategory[0]}${filterCategory.slice(1)}`).toLowerCase()
       );
     }
 
