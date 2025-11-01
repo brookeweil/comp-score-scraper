@@ -122,7 +122,6 @@ def main(filter_gender=None, filter_category=None):
     # filter if filters provided
     if filter_gender and filter_category:
         results = category_results[f"{Division(filter_gender, filter_category)}"]
-        print(category_results)
     else:
         results = all_results
     results.sort(key=lambda x: x.score, reverse=True)
