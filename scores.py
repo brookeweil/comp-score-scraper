@@ -116,10 +116,15 @@ def main(filter_gender=None, filter_category=None):
     for d in all_divisions:
         category_results[f'{d}'] = []
         for result in all_results:
-            if result.category == d.category and result.gender == d.gender:
+            if f"{Division(result.gender, result.category)}" == f"{d}":
                 category_results[f'{d}'].append(result)
 
-    results = category_results[f'{Division(filter_gender, filter_category)}']
+    # filter if filters provided
+    if filter_gender and filter_category:
+        results = category_results[f"{Division(filter_gender, filter_category)}"]
+        print(category_results)
+    else:
+        results = all_results
     results.sort(key=lambda x: x.score, reverse=True)
     if not results:
         print('No results found for the given filters.')
