@@ -340,7 +340,7 @@ function App() {
                       <Table.ColumnHeader>Rank</Table.ColumnHeader>
                       <Table.ColumnHeader>Climber Name</Table.ColumnHeader>
                         <Table.ColumnHeader textAlign="center">Score</Table.ColumnHeader>
-                        <Table.ColumnHeader textAlign="center">Category</Table.ColumnHeader>
+                        <Table.ColumnHeader textAlign="center">Division</Table.ColumnHeader>
                       <Table.ColumnHeader>Scored Climbs</Table.ColumnHeader>
                     </Table.Row>
                   </Table.Header>
@@ -348,10 +348,10 @@ function App() {
                     {results.map((result, index) => (
                       <Table.Row key={result.climberName} _odd={{ bg: "blue.50" }}>
                         <Table.Cell fontWeight="bold">{index + 1}</Table.Cell>
-                        <Table.Cell>{result.climberName}</Table.Cell>
+                        <Table.Cell maxWidth="85px"> {result.climberName}</Table.Cell>
                         <Table.Cell textAlign="center" fontWeight="bold">{result.score}</Table.Cell>
-                        <Table.Cell textAlign="center">{result.category}</Table.Cell>
-                        <Table.Cell maxWidth="100px">{result.scoredClimbs}</Table.Cell>
+                        <Table.Cell textAlign="center">{result.gender} {result.category}</Table.Cell>
+                        <Table.Cell maxWidth="85px">{result.scoredClimbs}</Table.Cell>
                       </Table.Row>
                     ))}
                   </Table.Body>
